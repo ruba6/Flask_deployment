@@ -1,0 +1,205 @@
+<!doctype html> 
+<html lang="en"> 
+  
+<head> 
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width-device-width,initial-scale=1.0">
+      <title> Contact </title>
+      <style>
+        * {
+          box-sizing:content-box;
+        }
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        /* Style the header */
+        header {
+          background-color: #666;
+          padding: 5px;
+          text-align: center;
+          font-size: 15px;
+          color: white;
+        }
+        
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+          float: left;
+          width: 25%;
+          height: 350px; /* only for demonstration, should be removed */
+          background: #ccc;
+          padding: 20px;
+        }
+        
+        /* Style the list inside the menu */
+        nav{
+          list-style-type: none;
+          padding: 20px;
+        }
+        article {
+          float: center;
+          padding: 2px;
+          width: 70%;
+          height: 300px;
+        }
+        
+        /* Clear floats after the columns */
+        section::after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+        footer {
+          background-color: #777;
+          padding: 2px;
+          text-align: center;
+          color: white;
+        }        
+        
+        /* Responsive layout - */
+        @media (max-width: 100px) {
+          nav, article {
+            width: 50%;
+            height: 30px;
+          }
+        }
+        input[type=text], select, textarea {
+          width: 20%;
+          padding: 6px;
+          border: 1px solid hsl(0, 0%, 80%);
+          border-radius: 2px;
+          resize: vertical;
+        }
+        h2{
+          text-align:center;
+          font-size: 25px;
+        }
+        label{
+          text-align: center;
+          font-size: 20px;
+          font-weight: 100;
+        }
+        .btn{
+          background-color: gray;
+          color: white;
+          padding: 2px;
+          border: none;
+          border-radius: 2px;
+          cursor:pointer;
+          float: center;
+          width:75px;
+          margin-top: 10px;
+          display: flex;
+          align-items:center;
+          justify-content:space-between;
+        }
+
+        a{
+          background-color: gray;
+          color: white;
+          padding: 2px;
+          border: none;
+          border-radius: 2px;
+          cursor:pointer;
+          float: center;
+          width:100px;
+        }
+      </style>
+</head>
+
+<body style="background-color:silver ;">
+    <h1 style="text-align: center;"> Contact Us</h1>
+    <header>
+        <h3 style="text-align: left;">Contact Details</h3>
+    </header>
+      
+     <section>
+        <nav>
+          <div class="text-center">
+                    <p><strong> Name </strong></p>
+                    <p> Rubadarshini Loganathan </p> 
+                    <p><strong>Address </strong></p> 
+                    <p>136, Royal Kapson, Chennai, India, 600077</p> 
+                    <p><strong>Phone</strong></p> 
+                    <p>+91 345-567-8346</p> 
+                    <p><strong>Email</strong></p> 
+                    <p>rubaloganathan6@gmail.com</p>
+                    <p><strong>LinkedIn Id</strong></p>
+                    <p>ruba***1872</p> 
+          </div>
+        </nav> 
+        <article>
+        <h2 style="text-align: left;"> Feel Free To Contact</h2>
+
+          <form action="{{ url_for('send_email') }}" method="POST">
+            <div>
+                <label for="name">Name:</label></br>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div>
+                <label for="subject">Subject:</label></br>
+                <input type="text" name="subject" id="subject" required>
+            </div>
+            <div>
+                <label for="email">Email:</label></br>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div>
+                <label for="message">Your Message:</label></br>
+                <textarea name="message" id="message" required></textarea>
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit">
+                  Send
+                </button></br>
+                <a class="btn btn-primary" href="{{ url_for('download_cv') }}">
+                Download CV
+                </a>
+            </div>
+          </form>
+        </article>
+    </section>
+    <footer>
+      <p>Thank You!!</p>
+    </footer>
+</body>
+</html>
+     
+
+   <!--     <form action="{{ url_for('send_email') }}" method="POST"></form>
+        <div class="row">
+          <div class="col-25">
+            <label for="name">Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="subject" name="subject" placeholder="Your subject.." required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="email" name="email" placeholder="Your mail.." required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="message">Your Message</label>
+          </div>
+          <div class="col-75">
+            <textarea id="message" name="message" placeholder="Write something.." style="height:80px"></textarea>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col"> 
+            <button type="submit">Send</button></br>-->
