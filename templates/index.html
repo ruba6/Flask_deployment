@@ -1,0 +1,361 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <!-- Left Sidebar -->
+    <div class="col-md-4 col-lg-3 sidebar">
+      <div class="sidebar-content text-center">
+        <img src="{{ url_for('static', filename='images/naukri_profile.jpeg') }}"              
+             class="img-fluid rounded shadow mb-3"
+             alt="Profile Photo" 
+             width="250"
+             height="250"
+             style="object-fit: cover;">
+        <h3 class="fw-bold">Rubadarshini Loganathan</h3>
+        <p class="text-muted">Software Engineer | Python Developer | DevOps Engineer | Automation & Scripting | Generative AI | Flask</p>
+      </div>
+
+      <hr>
+      <h5 class="fw-bold" style = "text-align:center;">Connect</h5>
+      <div class="d-flex justify-content-center gap-5 mt-2">
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=rubaloganathan6@gmail.com" target="_blank" title="Email">
+          <i class="bi bi-envelope-fill fs-4" style="color:#D44638;"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/rubadarshini-l-180702rdl" target="_blank" title="LinkedIn">     
+          <i class="bi bi-linkedin fs-4" style="color:#0077B5;"></i>
+        </a>
+
+        <a href="https://wa.me/919361213607" target="_blank" title="WhatsApp">
+          <i class="bi bi-telephone-fill fs-4" style="color:#25D366;"></i>
+        </a>
+      </div>
+      <hr>
+
+      <a href="{{ url_for('download_cv') }}" class="btn btn-primary w-100 mt-3">
+        <i class="bi bi-download me-2"></i> Download Resume
+      </a>
+    </div>
+
+
+    <!-- Right Main Content -->
+    <div class="main-content">
+      <!-- About / Summary -->
+      <section id="about" class="about-section">
+        <h2 class="section-title text-center mb-4"> Welcome to My Portfolio! </h2>
+        <div class="about-container">
+          <h5> Howdy! Step into my world of code, clouds, and automation.</h5>
+          <p>
+            Shifting from reactive support to proactive engineering requires a modern approach. 
+            As a Python/DevOps Engineer, I deliver this by: building self-healing systems on Azure, crafting CI/CD pipelines 
+            that actually work, and automating the tedious stuff so you don't have to. My observability dashboards (Grafana/Loki) 
+            tell the whole story at a glance. And for the future? I'm weaving GenAI into the fabric of systems to make them not 
+            just automated, but intelligently so.
+          </p>
+        </div>
+      </section>
+      <hr>
+
+      <!-- Experience -->
+      <section id="experience" class="experience-section">
+        <h2 class="section-title text-center mb-4">
+          <i class="bi bi-briefcase-fill me-2 experience-icon"></i> Professional Journey
+        </h2>
+        <ul class="timeline list-unstyled">
+          <li class="timeline-item">
+            <h4 class="fw-bold mb-2">Nextbrain Technologies</h4>
+            <h6 class="mb-1"><i class="bi bi-geo-alt text-primary me-2"></i>Bangalore, India</h6>
+            <h6 class="mb-1"><i class="bi bi-person-badge-fill text-primary me-2"></i>Software Engineer</h6>
+            <h6 class="mb-3"><i class="bi bi-calendar-event-fill text-primary me-2"></i>Dec 2024 – Present</h6>
+            <ul class="exp-points">
+              <li>Engineered and optimized backend pipelines for real-time and historical stock market data, improving query performance and ensuring high data integrity.</li>
+              <li>Developed scalable Python scripts applying OOP principles, creating reusable modules that reduced code duplication across projects.</li>
+              <li>Implemented CI/CD pipelines in Azure DevOps, automating testing, deployments, and delivery processes to enhance release reliability.</li>
+              <li>Migrated CI/CD workflows from Azure DevOps to GitHub Actions, improving build speed by 25% and enabling reusable, environment- specific automation.</li>
+              <li>Automated system operations with Bash and Python, reducing manual intervention by 70%</li>
+              <li>Monitored and maintained Linux-based servers, performing log analysis, uptime checks, and resource tuning to sustain 99.9% service availability.</li>
+              <li>Integrated Prometheus & Grafana dashboards to monitor key system metrics, enabling faster root cause analysis.</li>
+              <li>Enabled centralized logging by configuring Promtail + Loki with Grafana, cutting incident triage time in half.</li>
+              <li>Built Retrieval-Augmented Generation (RAG) pipelines using LangChain, LangGraph, and Chroma (Vector DB) to deliver domain-specific, contextually relevant chatbot responses.</li>
+              <li>Designed Multi-agent AI systems with CrewAI, Phidata, and enabling agentic collaboration, decision-making, and adaptive workflows.</li>
+              <li>Applied Prompt engineering and Pydantic-based data validation to ensure model reliability, reproducibility, and controlled output generation.</li>
+              <li>Gained hands-on experience with deep learning frameworks (PyTorch) and vector databases (Chroma) for large-scale models.</li>
+            </ul>
+          </li>
+          <li class="timeline-item">
+            <h4 class="fw-bold mb-2">TATA ELXSI</h4>
+            <h6 class="mb-1"><i class="bi bi-geo-alt text-primary me-2"></i>Chennai, India</h6>
+            <h6 class="mb-1"><i class="bi bi-person-badge-fill text-primary me-2"></i>Intern</h6>
+            <h6 class="mb-3"><i class="bi bi-calendar-event-fill text-primary me-2"></i>Oct 2023 – Jun 2024</h6>
+            <ul class="exp-points">
+              <li>Developed and deployed a web application for internal operations, reducing manual processing time by 30%.</li>
+              <li>Automated data cleaning and analysis using Pandas, processing raw Excel files into structured insights.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <hr>
+      <!-- Academics -->
+      <section id="academics">
+        <h2 class="section-title">
+          <i class="bi bi-mortarboard-fill text-primary me-2 academics-icon"></i> Academics
+        </h2>
+        <div class="academics-container">
+          <div class="academics-row-1">
+            <div class="academics-card">
+              <h5 class="fw-semibold">Bachelors in Electronics & Communication Engineering</h5>
+              <p><i class="bi bi-building"></i> R.M.K. Engineering College</p>
+              <p><i class="bi bi-geo-alt"></i> Kavaraipettai, India</p>
+              <p><i class="bi bi-calendar3"></i> Oct 2020 – Mar 2024</p>
+              <p><i class="bi bi-award text-warning"></i> CGPA: 9.15</p>
+            </div>
+          </div>
+          <div class="academics-row-2">
+            <div class="academics-card">
+              <h5 class="fw-semibold">Senior Secondary</h5>
+              <p><i class="bi bi-building"></i> Maharishi School Of Excellence Senior Secondary</p>
+              <p><i class="bi bi-geo-alt"></i> Chennai, India</p>
+              <p><i class="bi bi-calendar3"></i> April 2019 – Mar 2020</p>
+              <p><i class="bi bi-award text-warning"></i> Percentage: 86.4%</p>
+            </div>
+            <div class="academics-card">
+              <h5 class="fw-semibold">Higher Secondary</h5>
+              <p><i class="bi bi-building"></i> Maharishi School Of Excellence Senior Secondary</p>
+              <p><i class="bi bi-geo-alt"></i> Chennai, India</p>
+              <p><i class="bi bi-calendar3"></i> April 2017 – Mar 2018</p>
+              <p><i class="bi bi-award text-warning"></i> Percentage: 87.4%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr>
+      <!-- Core Skills -->
+      <section id="skills" class="skills">
+        <h2 class="fw-bold text-light mb-4">⚙️ Core Skills</h2>
+        <div class="skills-container">
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/python.jpeg') }}" alt="Python" class="skill-logo">
+            </div>
+            <span>Python</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/azure.jpeg') }}" alt="Microsoft Azure Cloud" class="skill-logo">
+            </div>
+            <span>Microsoft Azure Cloud</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/githubactions.jpeg') }}" alt="Github Actions" class="skill-logo">
+            </div>
+            <span>Github Actions</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/devops.jpeg') }}" alt="DevOps" class="skill-logo">
+            </div>
+            <span>DevOps</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/linux.jpeg') }}" alt="Linux/Bash" class="skill-logo">
+            </div>
+            <span>Linux/Bash</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/grafanaloki.jpeg') }}" alt="Grafana + Loki" class="skill-logo">
+            </div>
+            <span>Grafana + Loki</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/html.jpeg') }}" alt="HTML" class="skill-logo">
+            </div>
+            <span>HTML</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/css.jpeg') }}" alt="CSS" class="skill-logo">
+            </div>
+            <span>CSS</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/mysql.jpeg') }}" alt="MySQL" class="skill-logo">
+            </div>
+            <span>MySQL</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/mongodb.jpeg') }}" alt="MongoDB" class="skill-logo">
+            </div>
+            <span>MongoDB</span>
+          </div>
+          
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/flask.jpeg') }}" alt="Flask" class="skill-logo">
+            </div>
+            <span>Flask</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/django.jpeg') }}" alt="Django" class="skill-logo">
+            </div>
+            <span>Django</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/pandas.jpeg') }}" alt="Pandas" class="skill-logo">
+            </div>
+            <span>Pandas</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/opencv.jpeg') }}" alt="OpenCV" class="skill-logo">
+            </div>
+            <span>OpenCV</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/genai.jpeg') }}" alt="GenAI" class="skill-logo">
+            </div>
+            <span>GenAI</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/llm.jpeg') }}" alt="LLM" class="skill-logo">
+            </div>
+            <span>LLM</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/crewai.jpeg') }}" alt="crewai" class="skill-logo">
+            </div>
+            <span>crewai</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/langchain.jpeg') }}" alt="LangChain" class="skill-logo">
+            </div>
+            <span>LangChain</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/langgraph.jpeg') }}" alt="LangGraph" class="skill-logo">
+            </div>
+            <span>LangGraph</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/rag.jpeg') }}" alt="RAG" class="skill-logo">
+            </div>
+            <span>RAG</span>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-logo-circle">
+              <img src="{{ url_for('static', filename='images/prompt.jpeg') }}" alt="Prompt Engineering" class="skill-logo">
+            </div>
+            <span>Prompt Engineering</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="fw-bold mb-4 text-center">🚀 Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="project-card">
+              <h5 class="project-title">Portfolio Website Using Flask</h5>
+              <p class="project-date">
+                <i class="bi bi-calendar-event"></i> 2024
+              </p>
+              <p class="project-tools">
+                <i class="bi bi-tools"></i> Flask, HTML, CSS, Bootstrap, Python
+              </p>
+              <p class="project-desc">
+                <i class="bi bi-cpu-fill"></i> Developed a dynamic portfolio web application to showcase my professional journey and projects.
+              </p>
+              <a href="https://github.com/your-username/portfolio" target="_blank" class="btn btn-primary btn-sm">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+          
+          <div class="col-md-6">
+            <div class="project-card">
+              <h5 class="project-title">Generative AI Chatbot & Multi-Agent AI Systems</h5>
+              <p class="project-date">
+                <i class="bi bi-calendar-event"></i> 2025 (In Progress)
+              </p>
+              <p class="project-tools">
+                <i class="bi bi-tools"></i> Python, LangChain, LangGraph, Chroma, CrewAI, Phidata
+              </p>
+              <p class="project-desc"> 
+                <i class="bi bi-cpu-fill"></i> Built a domain-specific AI chatbot.
+              </p>
+              <a href="https://github.com/your-username/genai-chatbot" target="_blank" class="btn btn-primary btn-sm">
+                <i class="bi bi-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+
+
+      <!-- Projects -->
+      <!-- <section id="projects">
+        <h2 class="fw-bold mb-4 text-center">🚀 Projects</h2>
+        <div class="project-card">
+          <h5 class="project-title">Portfolio Website Using Flask</h5>
+          <p class="project-desc">
+            A dynamic flask-based portfolio web application showcases my professional journey. 
+            Built with Flask, HTML, CSS, and Bootstrap, where each component is structured to reflect clean design, 
+            scalable development & responsive user experience.
+          </p>
+          <a href="https://github.com/your-username/portfolio" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h5 class="project-title">Generative AI Chatbot and Multi-Agent AI Systems
+            (In Progress)</h5>
+          <p class="project-desc">
+            Built a domain-specific chatbot using LangChain, LangGraph, and Chroma with RAG pipelines, improving accuracy of responses. 
+            Designed multi-agent systems with CrewAI and Phidata for autonomous workflows.          
+          </p>
+          <a href="https://github.com/your-username/portfolio" target="_blank" class="btn btn-outline-light btn-sm">GitHub</a>
+        </div> 
+      </section>-->   
+     </div>
+  </div>
+</div>
+
+{% endblock %}
+

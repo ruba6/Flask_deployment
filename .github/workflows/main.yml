@@ -1,0 +1,29 @@
+name: Old Flask App
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || pip install flask
+
+      - name: Run Flask app for smoke test
+        env:
+          FLASK_APP: app1.py
+        run: |
+          nohup python -m flask --app app1 run --host=0.0.0.0 --port=5000 > flask.log 2>&1 &
+          sleep 5
+          cat flask.log
+          curl -f http://127.0.0.1:5000 || (cat flask.log && exit 1)
