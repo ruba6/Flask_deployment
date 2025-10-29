@@ -13,8 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
 /* ===== Left sidebar  Styling ===== */
 
 /* === Fixed Sidebar === */
@@ -534,3 +532,55 @@ footer {
   color: white;
   margin-right: 6px;
 }
+
+/* === Responsive Fixes === */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .sidebar {
+    text-align: center;
+  }
+
+  .sidebar img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .sidebar .btn {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .skills-container,
+  .academics-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  .project-card {
+    text-align: center;
+  }
+
+  .timeline-item {
+    margin-bottom: 25px;
+  }
+}
+
+
+
+
+
+
+
+
