@@ -1,5 +1,3 @@
-
-
 body {
   background-color: gainsboro;
   color: black;           /* default text color for contrast */
@@ -56,11 +54,11 @@ html {
 }
 
 .main-content {
-  margin-left: 300px;           /* sidebar width + small gap */
+  margin-left: 400px;           /* sidebar width + small gap */
   margin-top: 30px;             /* below navbar */
   margin-bottom: 30px;          /* above footer */
   padding: 30px;
-  width: calc(100% - 370px);
+  width: calc(100% - 400px);
   background-color: transparent;
   color: #EAEAEA;
 }
@@ -564,18 +562,67 @@ footer {
   }
 
   .skill-card {
-    width: 90%;
+    width: 80%;
     margin-bottom: 15px;
   }
 
-  .project-card {
+  .project-card,
+  .academics-card {
     text-align: center;
+    width: 90%;
+
   }
 
   .timeline-item {
     margin-bottom: 25px;
   }
+  
+  .academics-row-2 {
+  flex-direction: column;
+  align-items: center;
+  }
+  
+   .navbar {
+    position: relative;
+  }
+
+  footer {
+    position: relative;
+    padding: 15px;
+  } 
 }
+
+@media (max-width: 992px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0;
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  .main-content {
+    margin: 0;
+    width: 100%;
+    padding: 15px;
+  }
+
+  footer {
+    position: relative;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .sidebar {
+    overflow-y: visible;
+  }
+}
+  
+
+
+
+
 
 
 
